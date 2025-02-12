@@ -1,5 +1,54 @@
 ---
 import "../styles/global.css";
+import EventCard from '../components/EventCard.astro';
+
+// You might want to create an interface or type for your events
+interface TimelineEvent {
+    title: string;
+    date: string;
+    description: string;
+    imageUrl: string;
+    imageAlt: string;
+}
+
+// You can store your events data in an array
+const events: TimelineEvent[] = [
+    {
+        title: "Første Møde",
+        date: "16. september 2022",
+        description: "Det hele startede til en kollegiefest på dit kollegie. Der blev drukket godt igennem, men en ting stod ud. Dig. Jeg husker hvordan vi havde nogle vidunderlig samtaler omkring vores studier. Jeg husker dig som at være enomrt sød, venlig og imødekommende. Men mere skete der ikke den aften. Jeg har ikke nogle billeder fra dengang, så forneden kan du se dit gamle kollegie.",
+        imageUrl: "/Slotsgade-Kollegiet.png",
+        imageAlt: "Første møde"
+    },
+    {
+        title: "Vi Blev Kærester",
+        date: "4. januar 2023",
+        description: "Den dag du sagde ja til at være min kæreste. Det bedste ja jeg nogensinde har fået 💝",
+        imageUrl: "/Dagen-vi-blev-kæresterjpg.jpg",
+        imageAlt: "Blev kærester"
+    },
+    {
+        title: "Rød Panda Eventyr",
+        date: "14. februar 2023",
+        description: "Vores første Valentinsdag sammen i Odense Zoo.",
+        imageUrl: "/Sofie-og-Hans-i-odense-zoo.jpg",
+        imageAlt: "Odense Zoo"
+    },
+    {
+        title: "Oslo Eventyr",
+        date: "23. august 2023",
+        description: "Vores første udlandsrejse sammen. Norge var magisk, men mest fordi du var der 🇳🇴",
+        imageUrl: "/Hans-og-sofie-norge.jpg",
+        imageAlt: "Oslo Tur"
+    },
+    {
+        title: "Kreta Paradis",
+        date: "19. august 2024",
+        description: "Vores smukke middelhavseventyr. Sol, strand og kærlighed 🌊",
+        imageUrl: "/Hans-og-sofie-kreta-bådtur.jpg",
+        imageAlt: "Kreta Ferie"
+    }
+];
 ---
 
 <!DOCTYPE html>
@@ -8,123 +57,29 @@ import "../styles/global.css";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Til Min Kære Sofie ❤️</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #fce7f3;
-            z-index: -1;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 16px;
-            height: 16px;
-            background: #ec4899;
-            border-radius: 50%;
-            border: 3px solid #fce7f3;
-        }
-        @media (max-width: 768px) {
-            .timeline-line {
-                left: 2rem;
-            }
-            .timeline-dot {
-                left: 2rem;
-            }
-        }
-    </style>
 </head>
 <body class="bg-pink-50">
     <div class="min-h-screen p-4">
         <!-- Header -->
         <header class="text-center py-16 px-4">
-            <h1 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4">Til min kæreste Sofie. Glædelig valentins dag ❤️</h1>
-            <p class="text-pink-500 text-xl">Tag med mig i en tur ned i memory lane</p>
+            <h1 class="text-2xl md:text-4xl font-bold text-pink-600 mb-4">Til min kæreste Sofie. Glædelig valentins dag ❤️</h1>
+            <p class="text-pink-500 text-lg md:text-xl">Tag med mig i en tur ned i memory lane</p>
         </header>
 
         <!-- Timeline -->
         <div class="max-w-6xl mx-auto relative pb-32">
             <div class="timeline-line"></div>
 
-            <!-- Første Møde -->
-            <div class="relative mb-24 timeline-section">
-                <div class="timeline-dot"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="md:text-right order-1 md:order-1">
-                        <h2 class="text-2xl font-bold text-pink-600 mb-2">Første Møde</h2>
-                        <p class="text-pink-500">16. september 2022</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow order-2 md:order-2">
-                        <p class="text-gray-700 mb-4">Det hele startede til en kollegiefest på dit kollegie. Der blev drukket godt igennem, men en ting stod ud. Dig. Jeg husker hvordan vi havde nogle vidunderlig samtaler omkring vores studier. Jeg husker dig som at være enomrt sød, venlig og imødekommende. Men mere skete der ikke den aften. Jeg har ikke nogle billeder fra dengang, så forneden kan du se dit gamle kollegie.</p>
-                        <img src="/Slotsgade-Kollegiet.png" alt="Første møde" class="w-full rounded-lg object-cover h-64">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Blev Kærester -->
-            <div class="relative mb-24 timeline-section">
-                <div class="timeline-dot"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow order-2 md:order-1">
-                        <p class="text-gray-700 mb-4">Den dag du sagde ja til at være min kæreste. Det bedste ja jeg nogensinde har fået 💝</p>
-                        <img src="/Dagen-vi-blev-kæresterjpg.jpg" alt="Blev kærester" class="w-full rounded-lg object-cover h-64">
-                    </div>
-                    <div class="md:text-left order-1 md:order-2">
-                        <h2 class="text-2xl font-bold text-pink-600 mb-2">Vi Blev Kærester</h2>
-                        <p class="text-pink-500">4. januar 2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Odense Zoo -->
-            <div class="relative mb-24 timeline-section">
-                <div class="timeline-dot"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="md:text-right order-1 md:order-1">
-                        <h2 class="text-2xl font-bold text-pink-600 mb-2">Rød Panda Eventyr</h2>
-                        <p class="text-pink-500">14. februar 2023</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow order-2 md:order-2">
-                        <p class="text-gray-700 mb-4">Vores første Valentinsdag sammen i Odense Zoo. </p>
-                        <img src="/Sofie-og-Hans-i-odense-zoo.jpg" alt="Odense Zoo" class="w-full rounded-lg object-cover h-64">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Oslo Tur -->
-            <div class="relative mb-24 timeline-section">
-                <div class="timeline-dot"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow order-2 md:order-1">
-                        <p class="text-gray-700 mb-4">Vores første udlandsrejse sammen. Norge var magisk, men mest fordi du var der 🇳🇴</p>
-                        <img src="/Hans-og-sofie-norge.jpg" alt="Oslo Tur" class="w-full rounded-lg object-cover h-64">
-                    </div>
-                    <div class="md:text-left order-1 md:order-2">
-                        <h2 class="text-2xl font-bold text-pink-600 mb-2">Oslo Eventyr</h2>
-                        <p class="text-pink-500">23. august 2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kreta Ferie -->
-            <div class="relative mb-24 timeline-section">
-                <div class="timeline-dot"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="md:text-right order-1 md:order-1">
-                        <h2 class="text-2xl font-bold text-pink-600 mb-2">Kreta Paradis</h2>
-                        <p class="text-pink-500">19. august 2024</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow order-2 md:order-2">
-                        <p class="text-gray-700 mb-4">Vores smukke middelhavseventyr. Sol, strand og kærlighed 🌊</p>
-                        <img src="/Hans-og-sofie-kreta-bådtur.jpg" alt="Kreta Ferie" class="w-full rounded-lg object-cover h-64">
-                    </div>
-                </div>
-            </div>
+            {events.map((event, index) => (
+                <EventCard 
+                    title={event.title}
+                    date={event.date}
+                    description={event.description}
+                    imageUrl={event.imageUrl}
+                    imageAlt={event.imageAlt}
+                    isReversed={index % 2 !== 0}
+                />
+            ))}
 
             <!-- Fotogalleri -->
             <div class="relative timeline-section">

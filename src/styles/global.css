@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #fce7f3;
+    z-index: -1;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: #ec4899;
+    border-radius: 50%;
+    border: 3px solid #fce7f3;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 24px;
+    }
+    .timeline-dot {
+        left: 24px;
+    }
+    .timeline-section {
+        padding-left: 48px;
+    }
+    .mobile-text {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+}
