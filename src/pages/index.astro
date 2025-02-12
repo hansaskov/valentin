@@ -1,11 +1,147 @@
 ---
+import "../styles/global.css";
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sofie, With Love ❤️</title>
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/core@v4.0.0-alpha.1/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for scroll-snap to ensure smooth scrolling */
+        html {
+            scroll-snap-type: y mandatory;
+        }
+        body {
+            scroll-snap-align: start;
+        }
+        .timeline-item {
+            scroll-snap-align: start; /* Or 'center', depending on desired snap point */
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-sans">
+    <div class="container mx-auto px-4 py-10">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-pink-700 mb-2">To My Dearest Sofie, Happy Valentine's Day ❤️</h1>
+            <p class="text-pink-500 text-lg">A little trip down memory lane...</p>
+        </header>
+
+        <main class="relative">
+            <div class="absolute left-1/2 h-full border-r-2 border-pink-300 hidden md:block"></div>
+
+            <section class="mb-8 timeline-item">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-pink-700">September 16, 2022</h3>
+                        <p class="text-pink-500">The Day We Met ✨</p>
+                    </div>
+                    <div class="relative">
+                        <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-gray-700 mb-2">It all started on this day! I remember being so excited and maybe a little nervous to meet you. Little did I know it was the start of something truly special.</p>
+                            <img src="public/Sofie-Ansigtet.jpg" alt="Sofie's face" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-Blomster-2.jpg';" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8 timeline-item">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="md:text-right mb-4 md:mb-0 md:order-2">
+                        <h3 class="text-xl font-semibold text-pink-700">January 04, 2023</h3>
+                        <p class="text-pink-500">Becoming Girlfriend & Boyfriend ❤️</p>
+                    </div>
+                    <div class="relative md:order-1">
+                        <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-gray-700 mb-2">A day filled with butterflies! Asking you to be my girlfriend was one of the best decisions of my life.  Every moment since has been a dream.</p>
+                            <img src="public/Dagen-vi-blev-kæresterjpg.jpg" alt="The day we became boyfriend and girlfriend" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-blomster.jpg';" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8 timeline-item">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-pink-700">February 14, 2023</h3>
+                        <p class="text-pink-500">Odense Zoo & Red Pandas 🐼</p>
+                    </div>
+                    <div class="relative">
+                        <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-gray-700 mb-2">Valentines Day at the zoo! Seeing the red pandas was so cute, just like you. It was a perfect day spent together. </p>
+                            <img src="public/Sofie-og-Hans-i-odense-zoo.jpg" alt="Sofie and Hans in Odense Zoo" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-i-zoo-københavn.jpg';" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8 timeline-item">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="md:text-right mb-4 md:mb-0 md:order-2">
+                        <h3 class="text-xl font-semibold text-pink-700">August 23, 2023</h3>
+                        <p class="text-pink-500">Oslo Adventure 🇳🇴</p>
+                    </div>
+                    <div class="relative md:order-1">
+                        <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-gray-700 mb-2">Our trip to Oslo was unforgettable. Exploring a new city with you, creating memories at every corner.  Especially loved our cosy evenings.</p>
+                            <img src="public/Hans-og-sofie-norge.jpg" alt="Hans and Sofie in Norway" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-Oslo.jpg';" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-8 timeline-item">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-semibold text-pink-700">August 19, 2024</h3>
+                        <p class="text-pink-500">Crete Getaway ☀️</p>
+                    </div>
+                    <div class="relative">
+                        <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-gray-700 mb-2">Crete was paradise! Sun, sea, and you by my side – what more could I ask for?  Remember that boat trip? 😉</p>
+                            <img src="public/Hans-og-sofie-kreta-bådtur.jpg" alt="Hans and Sofie boat trip in Crete" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-på-kreta.jpg';" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-16">
+                <h2 class="text-center text-2xl font-bold text-pink-700 mb-8">Bonus Moments 💖</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div>
+                        <img src="public/Baby-på-tørrestativ.jpg" alt="Baby på tørrestativ" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-baby-2.jpg';" >
+                    </div>
+                    <div>
+                        <img src="public/Den-gang-vi-troede-vi-ville-blive-dræbt-2.jpg" alt="Den gang vi troede vi ville blive dræbt 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Den-gang-vi-troede-vi-ville-blive-dræbt.jpg';" >
+                    </div>
+                    <div>
+                        <img src="/public/" alt="Hans og bøllehat" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/hans-i-nye-briller.jpg';" >
+                    </div>
+                    <div>
+                        <img src="public/Sofie-og-baby-3.jpg" alt="Sofie og baby 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-baby.jpg';" >
+                    </div>
+                     <div>
+                        <img src="public/Sofie-og-Hans-på-kreta-2.jpg" alt="Sofie og Hans på kreta 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-Hans-på-kreta-3.jpg';" >
+                    </div>
+                    <div>
+                        <img src="public/Sofie-og-princesse-3.jpg" alt="Sofie og princesse 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-prinsesse.jpg';" >
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 py-4 text-pink-500">
+            <p>© 2025 With Love, Hans ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
