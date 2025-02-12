@@ -1,7 +1,5 @@
 ---
 import "../styles/global.css";
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 ---
 
 <!DOCTYPE html>
@@ -9,8 +7,7 @@ import Layout from '../layouts/Layout.astro';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Sofie, With Love ❤️</title>
-    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/core@v4.0.0-alpha.1/dist/tailwind.min.css" rel="stylesheet">
+    <title>Til Min Sofie - Med Kærlighed ❤️</title>
     <style>
         /* Custom CSS for scroll-snap to ensure smooth scrolling */
         html {
@@ -27,8 +24,8 @@ import Layout from '../layouts/Layout.astro';
 <body class="bg-pink-50 font-sans">
     <div class="container mx-auto px-4 py-10">
         <header class="text-center mb-12">
-            <h1 class="text-3xl md:text-4xl font-bold text-pink-700 mb-2">To My Dearest Sofie, Happy Valentine's Day ❤️</h1>
-            <p class="text-pink-500 text-lg">A little trip down memory lane...</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-pink-700 mb-2">Til min kæreste Sofie. Glædelig valentins dag ❤️</h1>
+            <p class="text-pink-500 text-lg">Tag med mig i en tur ned i memory lane</p>
         </header>
 
         <main class="relative">
@@ -43,8 +40,8 @@ import Layout from '../layouts/Layout.astro';
                     <div class="relative">
                         <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
                         <div class="bg-white p-4 rounded-lg shadow-md">
-                            <p class="text-gray-700 mb-2">It all started on this day! I remember being so excited and maybe a little nervous to meet you. Little did I know it was the start of something truly special.</p>
-                            <img src="public/Sofie-Ansigtet.jpg" alt="Sofie's face" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-Blomster-2.jpg';" >
+                            <p class="text-gray-700 mb-2">Det hele startede til en kollegiefest på dit kollegie. Der blev drukket godt igennem, men en ting stod ud. Dig. Jeg husker hvordan vi havde nogle vidunderlig samtaler omkring vores studier. Jeg husker dig som at være enomrt sød, venlig og imødekommende. Men mere skete der ikke den aften. Jeg har ikke nogle billeder fra dengang, så forneden kan du se dit gamle kollegie.</p>
+                            <img src="/Slotsgade-Kollegiet.png" alt="Sofie's face" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='/Sofie-Blomster-2.jpg';" >
                         </div>
                     </div>
                 </div>
@@ -60,7 +57,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
                         <div class="bg-white p-4 rounded-lg shadow-md">
                             <p class="text-gray-700 mb-2">A day filled with butterflies! Asking you to be my girlfriend was one of the best decisions of my life.  Every moment since has been a dream.</p>
-                            <img src="public/Dagen-vi-blev-kæresterjpg.jpg" alt="The day we became boyfriend and girlfriend" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-blomster.jpg';" >
+                            <img src="/Dagen-vi-blev-kæresterjpg.jpg" alt="The day we became boyfriend and girlfriend" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='/Sofie-blomster.jpg';" >
                         </div>
                     </div>
                 </div>
@@ -76,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
                         <div class="bg-white p-4 rounded-lg shadow-md">
                             <p class="text-gray-700 mb-2">Valentines Day at the zoo! Seeing the red pandas was so cute, just like you. It was a perfect day spent together. </p>
-                            <img src="public/Sofie-og-Hans-i-odense-zoo.jpg" alt="Sofie and Hans in Odense Zoo" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-i-zoo-københavn.jpg';" >
+                            <img src="/Sofie-og-Hans-i-odense-zoo.jpg" alt="Sofie and Hans in Odense Zoo" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='/Sofie-i-zoo-københavn.jpg';" >
                         </div>
                     </div>
                 </div>
@@ -92,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
                         <div class="bg-white p-4 rounded-lg shadow-md">
                             <p class="text-gray-700 mb-2">Our trip to Oslo was unforgettable. Exploring a new city with you, creating memories at every corner.  Especially loved our cosy evenings.</p>
-                            <img src="public/Hans-og-sofie-norge.jpg" alt="Hans and Sofie in Norway" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-Oslo.jpg';" >
+                            <img src="/Hans-og-sofie-norge.jpg" alt="Hans and Sofie in Norway" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='/Sofie-Oslo.jpg';" >
                         </div>
                     </div>
                 </div>
@@ -108,7 +105,7 @@ import Layout from '../layouts/Layout.astro';
                         <div class="timeline-dot absolute -left-2 top-1 bg-pink-500 rounded-full w-4 h-4 hidden md:block"></div>
                         <div class="bg-white p-4 rounded-lg shadow-md">
                             <p class="text-gray-700 mb-2">Crete was paradise! Sun, sea, and you by my side – what more could I ask for?  Remember that boat trip? 😉</p>
-                            <img src="public/Hans-og-sofie-kreta-bådtur.jpg" alt="Hans and Sofie boat trip in Crete" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='public/Sofie-på-kreta.jpg';" >
+                            <img src="/Hans-og-sofie-kreta-bådtur.jpg" alt="Hans and Sofie boat trip in Crete" class="rounded-md mt-2 w-full" onerror="this.onerror=null;this.src='/Sofie-på-kreta.jpg';" >
                         </div>
                     </div>
                 </div>
@@ -118,22 +115,22 @@ import Layout from '../layouts/Layout.astro';
                 <h2 class="text-center text-2xl font-bold text-pink-700 mb-8">Bonus Moments 💖</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div>
-                        <img src="public/Baby-på-tørrestativ.jpg" alt="Baby på tørrestativ" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-baby-2.jpg';" >
+                        <img src="/Baby-på-tørrestativ.jpg" alt="Baby på tørrestativ" class="rounded-md w-full" onerror="this.onerror=null;this.src='/Sofie-og-baby-2.jpg';" >
                     </div>
                     <div>
-                        <img src="public/Den-gang-vi-troede-vi-ville-blive-dræbt-2.jpg" alt="Den gang vi troede vi ville blive dræbt 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Den-gang-vi-troede-vi-ville-blive-dræbt.jpg';" >
+                        <img src="/Den-gang-vi-troede-vi-ville-blive-dræbt-2.jpg" alt="Den gang vi troede vi ville blive dræbt 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='/Den-gang-vi-troede-vi-ville-blive-dræbt.jpg';" >
                     </div>
                     <div>
-                        <img src="/public/" alt="Hans og bøllehat" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/hans-i-nye-briller.jpg';" >
+                        <img src="//" alt="Hans og bøllehat" class="rounded-md w-full" onerror="this.onerror=null;this.src='/hans-i-nye-briller.jpg';" >
                     </div>
                     <div>
-                        <img src="public/Sofie-og-baby-3.jpg" alt="Sofie og baby 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-baby.jpg';" >
+                        <img src="/Sofie-og-baby-3.jpg" alt="Sofie og baby 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='/Sofie-og-baby.jpg';" >
                     </div>
                      <div>
-                        <img src="public/Sofie-og-Hans-på-kreta-2.jpg" alt="Sofie og Hans på kreta 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-Hans-på-kreta-3.jpg';" >
+                        <img src="/Sofie-og-Hans-på-kreta-2.jpg" alt="Sofie og Hans på kreta 2" class="rounded-md w-full" onerror="this.onerror=null;this.src='/Sofie-og-Hans-på-kreta-3.jpg';" >
                     </div>
                     <div>
-                        <img src="public/Sofie-og-princesse-3.jpg" alt="Sofie og princesse 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='public/Sofie-og-prinsesse.jpg';" >
+                        <img src="/Sofie-og-princesse-3.jpg" alt="Sofie og princesse 3" class="rounded-md w-full" onerror="this.onerror=null;this.src='/Sofie-og-prinsesse.jpg';" >
                     </div>
                 </div>
             </section>
