@@ -16,37 +16,51 @@ const events: TimelineEvent[] = [
     {
         title: "Første Møde",
         date: "16. september 2022",
-        description: "Det hele startede til en kollegiefest på dit kollegie. Der blev drukket godt igennem, men en ting stod ud. Dig. Jeg husker hvordan vi havde nogle vidunderlig samtaler omkring vores studier. Jeg husker dig som at være enomrt sød, venlig og imødekommende. Men mere skete der ikke den aften. Jeg har ikke nogle billeder fra dengang, så forneden kan du se dit gamle kollegie.",
-        imageUrl: "/Slotsgade-Kollegiet.png",
+        description: "Det hele startede til en fest på Slotsgadekollegiet. Iblandt selvskabet stod du især ud for at være være enomrt sød, venlig og imødekommende. Jeg husker vores vidunderlig samtaler omkring dit studie og din interrase i biologi. Det fik dig til at stråle med passion og entusiasme",
+        imageUrl: "/cute-heart-gif.gif",
         imageAlt: "Første møde"
+    },
+    {
+        title: "Det første initiativ",
+        date: "17. september 2022",
+        description: "Du var den første til at række ud. Men fik intet svar i 3 dage. Det viste sig at din besked anmodningerog var gemt væk og jeg kunne ikke se det før vi havde mindst én fælles ven. Heldighvis blev du venner med Casper på facebook og resten er histore",
+        imageUrl: "/Første-besked.png",
+        imageAlt: "Sofie inviteret mig ud på date"
     },
     {
         title: "Vi Blev Kærester",
         date: "4. januar 2023",
-        description: "Den dag du sagde ja til at være min kæreste. Det bedste ja jeg nogensinde har fået 💝",
+        description: "Den dag du sagde ja til at være min kæreste. Jeg kan huske hvor nærvøs jeg var og endte med at sige noget i rætningen af \"Sååå, hvad er vi egentligt? Er vi kærester?\" hvor du med et glædende smil hurtigt svarede ja",
         imageUrl: "/Dagen-vi-blev-kæresterjpg.jpg",
         imageAlt: "Blev kærester"
     },
     {
-        title: "Rød Panda Eventyr",
+        title: "Første Valentins",
         date: "14. februar 2023",
-        description: "Vores første Valentinsdag sammen i Odense Zoo.",
+        description: "Vores første Valentinsdag sammen i Odense Zoo. Har ikke så megte at sige andet end at vi begge elsker de røde pandaer.",
         imageUrl: "/Sofie-og-Hans-i-odense-zoo.jpg",
         imageAlt: "Odense Zoo"
     },
     {
-        title: "Oslo Eventyr",
+        title: "Tur til Oslo",
         date: "23. august 2023",
-        description: "Vores første udlandsrejse sammen. Norge var magisk, men mest fordi du var der 🇳🇴",
+        description: "Vores første udlandsrejse sammen. Billetterne havde vi vundet gennem Nordisk Bio og det var en vidunderlig tur sammen",
         imageUrl: "/Hans-og-sofie-norge.jpg",
         imageAlt: "Oslo Tur"
     },
     {
-        title: "Kreta Paradis",
+        title: "Ferie Sydpå",
         date: "19. august 2024",
-        description: "Vores smukke middelhavseventyr. Sol, strand og kærlighed 🌊",
+        description: "At holde ferie sammen i kreta var utrolig lækkrt, hvor vi havde nogle spændene ture sammen. Dog kunne jeg ikke holde ud at sole mig så meget på de samme strande. Det ved vi til næste gang ❤️",
         imageUrl: "/Hans-og-sofie-kreta-bådtur.jpg",
         imageAlt: "Kreta Ferie"
+    },
+    {
+        title: "Vi fik en baby",
+        date: "30. september 2024",
+        description: "Den mest kælende og søde nabokat \"baby\" ville tit komme på besøg for at blive nusset, kælet og for at putte. Vores kærlighed til katten er næsten lige så stor som til hinanden",
+        imageUrl: "/Sofie-og-baby-2.jpg",
+        imageAlt: "Sofie og baby putter"
     }
 ];
 ---
@@ -57,6 +71,29 @@ const events: TimelineEvent[] = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Til Min Kære Sofie ❤️</title>
+    <style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body class="bg-pink-50">
     <div class="min-h-screen p-4">
@@ -85,19 +122,94 @@ const events: TimelineEvent[] = [
             <div class="relative timeline-section">
                 <h2 class="text-2xl font-bold text-pink-600 mb-6 text-center">Flere Dejlige Minder Sammen</h2>
                 <div class="timeline-dot -mt-2"></div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow max-w-4xl mx-auto">
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <img src="/Sofie-og-baby.jpg" alt="Minde 1" class="w-full h-48 object-cover rounded-lg">
-                        <img src="/Sofie-blomster.jpg" alt="Minde 2" class="w-full h-48 object-cover rounded-lg">
-                        <img src="/Sofie-og-Hans-på-kreta-2.jpg" alt="Minde 3" class="w-full h-48 object-cover rounded-lg">
-                        <img src="/Sofie-Oslo.jpg" alt="Minde 4" class="w-full h-48 object-cover rounded-lg">
-                        <img src="/Sofie-på-kreta.jpg" alt="Minde 5" class="w-full h-48 object-cover rounded-lg">
-                        <img src="/sofie-hans-og-baby.jpg" alt="Minde 6" class="w-full h-48 object-cover rounded-lg">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow max-w-6xl mx-auto">
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-i-zoo-københavn.jpg" alt="Sofie i København Zoo" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-blomster.jpg" alt="Sofie med blomster" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Baby-på-tørrestativ.jpg" alt="Baby på tørrestativ" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Baby-står-udenfor.jpg" alt="Baby står udenfor" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Den-gang-vi-troede-vi-ville-blive-dræbt-2.jpg" alt="Sjovt minde sammen" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/hans-i-nye-briller.jpg" alt="Hans i nye briller" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Hans-og-sofie-kreta-bådtur.jpg" alt="Hans og Sofie på bådtur i Kreta" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Hans-og-sofie-norge.jpg" alt="Hans og Sofie i Norge" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Hotel-katten-fra-kreta.jpg" alt="Hotel katten fra Kreta" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-Ansigtet.jpg" alt="Sofie portræt" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-baby-3.jpg" alt="Sofie og Baby 3" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-baby-2.jpg" alt="Sofie og Baby 2" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-Blomster-2.jpg" alt="Sofie med blomster 2" class="w-full rounded-lg shadow-sm">
+                        </div>
+
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-baby.jpg" alt="Sofie og Baby" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Hans-i-odense-zoo.jpg" alt="Sofie og Hans i Odense Zoo" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Hans-på-kreta-2.jpg" alt="Sofie og Hans på Kreta 2" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Hans-på-kreta-3.jpg" alt="Sofie og Hans på Kreta 3" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Maise-i-zoo.jpg" alt="Sofie og Maise i zoo" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Miso.jpg" alt="Sofie og Miso" class="w-full rounded-lg shadow-sm">
+                        </div>
+
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-prinsesse.jpg" alt="Sofie og Prinsesse" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-prisesse-2jpg.jpg" alt="Sofie og Prinsesse 2" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Tor.jpg" alt="Sofie og Tor" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-og-Zoejpg.jpg" alt="Sofie og Zoe" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/sofie-hans-og-baby.jpg" alt="Sofie, Hans og Baby sammen" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/hans-og-bøllehat.jpg" alt="Hans med bøllehat" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-Oslo.jpg" alt="Sofie i Oslo" class="w-full rounded-lg shadow-sm">
+                        </div>
+                        <div class="masonry-item">
+                            <img loading="lazy" src="/Sofie-på-kreta.jpg" alt="Sofie på Kreta" class="w-full rounded-lg shadow-sm">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Footer -->
         <footer class="text-center py-8">
