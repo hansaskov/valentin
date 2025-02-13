@@ -6,6 +6,7 @@ interface Props {
     description: string;
     imageUrl: string;
     imageAlt: string;
+    loading?: "eager" | "lazy" | null | undefined;
     isReversed?: boolean;
 }
 
@@ -15,7 +16,8 @@ const {
     description, 
     imageUrl, 
     imageAlt, 
-    isReversed = false 
+    loading,
+    isReversed = false
 } = Astro.props;
 ---
 
@@ -37,6 +39,7 @@ const {
                 src={imageUrl} 
                 alt={imageAlt} 
                 class="w-full rounded-lg object-cover"
+                loading={loading}
             >
         </div>
     </div>
